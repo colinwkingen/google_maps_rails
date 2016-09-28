@@ -12,7 +12,8 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'minitest-rails'
 gem 'rest-client'
-
+gem 'gmaps4rails'
+gem 'underscore-rails'
 # minitest rails drops the test db after each rspec run
 # it is enabled in the test_helper.rb by changing minitest/autorun
 # to minitest/rails
