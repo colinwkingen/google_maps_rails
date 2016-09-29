@@ -1,7 +1,13 @@
-<h1>Random Search!</h1>
+
+
+<div class="header">
+  <h1>Random Search!</h1>
+  <%= link_to "Explore Portland", root_path, class: "btn btn-default btn-lg"%>
+</div>
+
 
 <div class="row">
-  <div class="col-md-6 panes">
+  <div class="col-md-6 panes" >
     <div id="pano1"></div>
   </div>
   <div class="col-md-6 panes">
@@ -26,56 +32,6 @@
 
 <script>
 
-  // function initialize1() {
-  //   var randLat = parseFloat((Math.random() * (45.5803363 - 45.4906974) + 45.4906974).toFixed(7))
-  //   var randLng = parseFloat((Math.random() * (122.5729292 - 122.7207826) -122.5729292).toFixed(7))
-  //   console.log(randLat)
-  //   console.log(randLng)
-  //   var loc1 = {lat: randLat, lng: randLng};
-  //   console.log(loc1)
-  //   var panorama1 = new google.maps.StreetViewPanorama(
-  //       document.getElementById('pano1'), {
-  //         position: loc1,
-  //         pov: {
-  //           heading: 34,
-  //           pitch: 10
-  //         }
-  //     });
-  //   map.setStreetView(panorama1);
-  // }
-  // function initialize() {
-  //   var randLat = parseFloat((Math.random() * (45.5803363 - 45.4906974) + 45.4906974).toFixed(7))
-  //   var randLng = parseFloat((Math.random() * (122.5729292 - 122.7207826) -122.5729292).toFixed(7))
-  //   console.log(randLat)
-  //   console.log(randLng)
-  //   console.log(loc2)
-  //   var loc2 = {lat: randLat, lng: randLng};
-  //   var panorama2 = new google.maps.StreetViewPanorama(
-  //       document.getElementById('pano2'), {
-  //         position: loc2,
-  //         pov: {
-  //           heading: 34,
-  //           pitch: 10
-  //         }
-  //     });
-  //   map.setStreetView(panorama2);
-  //   initialize2()
-  // }
-  // function initialize2() {
-  //   var randLat = parseFloat((Math.random() * (45.5803363 - 45.4906974) + 45.4906974).toFixed(7))
-  //   var randLng = parseFloat((Math.random() * (122.5729292 - 122.7207826) -122.5729292).toFixed(7))
-  //   var loc3 = {lat: randLat, lng: randLng};
-  //   var panorama3 = new google.maps.StreetViewPanorama(
-  //       document.getElementById('pano3'), {
-  //         position: loc3,
-  //         pov: {
-  //           heading: 34,
-  //           pitch: 10
-  //         }
-  //     });
-  //   map.setStreetView(panorama3);
-  //
-  // }
   function initialize() {
     var randLat1 = parseFloat((Math.random() * (45.5803363 - 45.4906974) + 45.4906974).toFixed(7))
     var randLng1 = parseFloat((Math.random() * (122.5729292 - 122.7207826) -122.5729292).toFixed(7))
