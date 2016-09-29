@@ -1,29 +1,130 @@
 <h1>Random Search!</h1>
 
-<div style='width: 800px;'>
-  <div id="pano" style='width: 800px; height: 400px;'></div>
+<div class="row">
+  <div class="col-md-6 panes">
+    <div id="pano1"></div>
+  </div>
+  <div class="col-md-6 panes">
+    <div id="pano2"></div>
+  </div>
+
 </div>
+
+<div class="row">
+  <div class="col-md-6 panes">
+    <div id="pano3"></div>
+  </div>
+  <div class="col-md-6 panes">
+    <div id="pano4"></div>
+  </div>
+
+</div>
+
 
 <div id="map"></div>
 <div id="pano"></div>
 
 <script>
 
+  // function initialize1() {
+  //   var randLat = parseFloat((Math.random() * (45.5803363 - 45.4906974) + 45.4906974).toFixed(7))
+  //   var randLng = parseFloat((Math.random() * (122.5729292 - 122.7207826) -122.5729292).toFixed(7))
+  //   console.log(randLat)
+  //   console.log(randLng)
+  //   var loc1 = {lat: randLat, lng: randLng};
+  //   console.log(loc1)
+  //   var panorama1 = new google.maps.StreetViewPanorama(
+  //       document.getElementById('pano1'), {
+  //         position: loc1,
+  //         pov: {
+  //           heading: 34,
+  //           pitch: 10
+  //         }
+  //     });
+  //   map.setStreetView(panorama1);
+  // }
+  // function initialize() {
+  //   var randLat = parseFloat((Math.random() * (45.5803363 - 45.4906974) + 45.4906974).toFixed(7))
+  //   var randLng = parseFloat((Math.random() * (122.5729292 - 122.7207826) -122.5729292).toFixed(7))
+  //   console.log(randLat)
+  //   console.log(randLng)
+  //   console.log(loc2)
+  //   var loc2 = {lat: randLat, lng: randLng};
+  //   var panorama2 = new google.maps.StreetViewPanorama(
+  //       document.getElementById('pano2'), {
+  //         position: loc2,
+  //         pov: {
+  //           heading: 34,
+  //           pitch: 10
+  //         }
+  //     });
+  //   map.setStreetView(panorama2);
+  //   initialize2()
+  // }
+  // function initialize2() {
+  //   var randLat = parseFloat((Math.random() * (45.5803363 - 45.4906974) + 45.4906974).toFixed(7))
+  //   var randLng = parseFloat((Math.random() * (122.5729292 - 122.7207826) -122.5729292).toFixed(7))
+  //   var loc3 = {lat: randLat, lng: randLng};
+  //   var panorama3 = new google.maps.StreetViewPanorama(
+  //       document.getElementById('pano3'), {
+  //         position: loc3,
+  //         pov: {
+  //           heading: 34,
+  //           pitch: 10
+  //         }
+  //     });
+  //   map.setStreetView(panorama3);
+  //
+  // }
   function initialize() {
-    var fenway = {lat: 45.5231, lng: -122.6765};
-    var map = new google.maps.Map(document.getElementById('map'), {
-      center: fenway,
-      zoom: 14
+    var randLat1 = parseFloat((Math.random() * (45.5803363 - 45.4906974) + 45.4906974).toFixed(7))
+    var randLng1 = parseFloat((Math.random() * (122.5729292 - 122.7207826) -122.5729292).toFixed(7))
+    var randLat2 = parseFloat((Math.random() * (45.5803363 - 45.4906974) + 45.4906974).toFixed(7))
+    var randLng2 = parseFloat((Math.random() * (122.5729292 - 122.7207826) -122.5729292).toFixed(7))
+    var randLat3 = parseFloat((Math.random() * (45.5803363 - 45.4906974) + 45.4906974).toFixed(7))
+    var randLng3 = parseFloat((Math.random() * (122.5729292 - 122.7207826) -122.5729292).toFixed(7))
+    var randLat4 = parseFloat((Math.random() * (45.5803363 - 45.4906974) + 45.4906974).toFixed(7))
+    var randLng4 = parseFloat((Math.random() * (122.5729292 - 122.7207826) -122.5729292).toFixed(7))
+    var loc1 = {lat: randLat1, lng: randLng1};
+    var loc2 = {lat: randLat2, lng: randLng2};
+    var loc3 = {lat: randLat3, lng: randLng3};
+    var loc4 = {lat: randLat4, lng: randLng4};
+    var panorama1 = new google.maps.StreetViewPanorama(
+      document.getElementById('pano1'), {
+        position: loc1,
+        pov: {
+          heading: 34,
+          pitch: 10
+      }
     });
-    var panorama = new google.maps.StreetViewPanorama(
-        document.getElementById('pano'), {
-          position: fenway,
-          pov: {
-            heading: 34,
-            pitch: 10
-          }
-        });
-    map.setStreetView(panorama);
+    var panorama2 = new google.maps.StreetViewPanorama(
+      document.getElementById('pano2'), {
+        position: loc2,
+        pov: {
+          heading: 34,
+          pitch: 10
+      }
+    });
+    var panorama3 = new google.maps.StreetViewPanorama(
+      document.getElementById('pano3'), {
+        position: loc3,
+        pov: {
+          heading: 34,
+          pitch: 10
+      }
+    });
+    var panorama4 = new google.maps.StreetViewPanorama(
+      document.getElementById('pano4'), {
+        position: loc4,
+        pov: {
+          heading: 34,
+          pitch: 10
+      }
+    });
+    map.setStreetView(panorama1);
+    map.setStreetView(panorama2);
+    map.setStreetView(panorama3);
+    map.setStreetView(panorama4);
   }
 </script>
 <script async defer
