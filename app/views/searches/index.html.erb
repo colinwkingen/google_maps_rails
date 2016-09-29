@@ -1,7 +1,8 @@
 
 
 <div class="header">
-  <h1>Random Search!</h1>
+  <h1>Explore Portland!</h1>
+  <h3>Can you guess where you are?</h3>
   <%= link_to "Explore Portland", root_path, class: "btn btn-default btn-lg"%>
 </div>
 
@@ -32,23 +33,24 @@
 
 <script>
 
-  function initialize() {
+  function randomCoords() {
     var randLat1 = parseFloat((Math.random() * (45.5803363 - 45.4906974) + 45.4906974).toFixed(7))
     var randLng1 = parseFloat((Math.random() * (122.5729292 - 122.7207826) -122.5729292).toFixed(7))
-    var randLat2 = parseFloat((Math.random() * (45.5803363 - 45.4906974) + 45.4906974).toFixed(7))
-    var randLng2 = parseFloat((Math.random() * (122.5729292 - 122.7207826) -122.5729292).toFixed(7))
-    var randLat3 = parseFloat((Math.random() * (45.5803363 - 45.4906974) + 45.4906974).toFixed(7))
-    var randLng3 = parseFloat((Math.random() * (122.5729292 - 122.7207826) -122.5729292).toFixed(7))
-    var randLat4 = parseFloat((Math.random() * (45.5803363 - 45.4906974) + 45.4906974).toFixed(7))
-    var randLng4 = parseFloat((Math.random() * (122.5729292 - 122.7207826) -122.5729292).toFixed(7))
-    var loc1 = {lat: randLat1, lng: randLng1};
-    var loc2 = {lat: randLat2, lng: randLng2};
-    var loc3 = {lat: randLat3, lng: randLng3};
-    var loc4 = {lat: randLat4, lng: randLng4};
+    return [randLat1, randLng1];
+  }
+
+
+  function initialize() {
+
+    var loc1 = {lat: randomCoords()[0], lng: randomCoords()[1]};
+    var loc2 = {lat: randomCoords()[0], lng: randomCoords()[1]};
+    var loc3 = {lat: randomCoords()[0], lng: randomCoords()[1]};
+    var loc4 = {lat: randomCoords()[0], lng: randomCoords()[1]};
     var panorama1 = new google.maps.StreetViewPanorama(
       document.getElementById('pano1'), {
         position: loc1,
         addressControl: false,
+        showRoadLabels: false,
         pov: {
           heading: 34,
           pitch: 10
@@ -58,6 +60,7 @@
       document.getElementById('pano2'), {
         position: loc2,
         addressControl: false,
+        showRoadLabels: false,
         pov: {
           heading: 34,
           pitch: 10
@@ -67,6 +70,7 @@
       document.getElementById('pano3'), {
         position: loc3,
         addressControl: false,
+        showRoadLabels: false,
         pov: {
           heading: 34,
           pitch: 10
@@ -76,6 +80,7 @@
       document.getElementById('pano4'), {
         position: loc4,
         addressControl: false,
+        showRoadLabels: false,
         pov: {
           heading: 34,
           pitch: 10
